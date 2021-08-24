@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Wisely</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="sub-header1">
+        <nav>
+            <a href="index.html"><img src="cap.jpg" class="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+            <li><a href="index.html">HOME</a>&nbsp;</li>
+            <li><a href="#">MENU</a>&nbsp;
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Schooling</a></li>
+                        <li class="sub-1"><a href="#">Graduation</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Course</a></li>
+                                    <li><a href="#">Top Colleges</a></li>
+                                    <li><a href="#">Job Opportunities</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sub-1"><a href="#">Post Graduation</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Course</a></li>
+                                    <li><a href="#">Top Colleges</a></li>
+                                    <li><a href="#">Job Opportunities</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">REVIEWS</a>&nbsp;</li>
+            <li><a href="signUp.html">LOGIN/SIGNUP</a>&nbsp;</li>
+            <li> <a href="about.html">ABOUT</a>&nbsp;</li>
+        </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" ></i>
+        </nav>
+        
+    </section>
+<!----login------>
+<div class="container">
+    <div class="card">
+        <div class="inner-box" id="card">
+            <div class="card-front">
+                <h2>LOGIN</h2>
+                <form>
+                    <input type="email" class="input-box" placeholder="Your Email Id" required>
+                    <input type="password" class="input-box" placeholder="password" required>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <input type="checkbox"><span>Remember Me</span>
+                </form>
+                <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+                <a href="">Forgot Password</a>
+            </div>
+            <div class="card-back">
+                <h2>REGISTER</h2>
+                <form>
+                    <input type="text" class="input-box" placeholder="Your Name" required>
+                    <input type="email" class="input-box" placeholder="Your Email Id" required>
+                    <input type="password" class="input-box" placeholder="password" required>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <input type="checkbox"><span>Remember Me</span>
+                </form>
+                <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+                <a href="">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----Footer----->
+
+<section class="footer"> 
+    <h4>About Us</h4>
+    <p>Choose Wisely is a platform for students who wants to make their career in the field of their interest,
+        and for the parents who are curious and bit confused about their child's career. <br> Sign Up/Login for more info.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by Pragya Singh</p>
+</section>
+
+
+
+
+<!-----Javascript for toggle menu---->
+   <script>
+       var navLinks = document.getElementById("navLinks");
+       function showMenu(){
+           navLinks.style.right = "0";
+       }
+       function hideMenu(){
+        navLinks.style.right = "-200px";
+       }
+   </script>
+<!------javascript for flipping cards----->
+<script>
+    var card = document.getElementById("card")
+
+    function openRegister(){
+        card.style.transform = "rotateY(-180deg)";
+    }
+    function openLogin(){
+        card.style.transform = "rotateY(0deg)";
+    }
+</script>
+</body>
+</html>
